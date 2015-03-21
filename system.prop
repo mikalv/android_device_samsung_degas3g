@@ -1,5 +1,5 @@
 #
-# system.prop for lt02wifi
+# system.prop for degaswifi
 #
 # rotation setting in potrait mode.
 ro.sf.hwrotation=270
