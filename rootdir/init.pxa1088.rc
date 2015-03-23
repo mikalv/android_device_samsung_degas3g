@@ -1,3 +1,4 @@
+import init_bsp.rc
 import init.pxa1088.usb.rc
 import init.pxa1088.tel.rc
 import init.wifi.rc
@@ -322,12 +323,12 @@ on post-fs
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
 
-    insmod /lib/modules/galcore.ko registerMemBase=0xc0400000 registerMemSize=0x1000 irqLine=40 contiguousSize=0x2000000 pmemSize=0 registerMemBase2D=0xd420c000 irqLine2D=104  registerMemSize2D=0x1000
+    insmod /system/lib/modules/galcore.ko registerMemBase=0xc0400000 registerMemSize=0x1000 irqLine=40 contiguousSize=0x2000000 pmemSize=0 registerMemBase2D=0xd420c000 irqLine2D=104  registerMemSize2D=0x1000
 
-    insmod /lib/modules/geu.ko
+    insmod /system/lib/modules/geu.ko
 
-    insmod /lib/modules/blcr_imports.ko
-    insmod /lib/modules/blcr.ko
+    insmod /system/lib/modules/blcr_imports.ko
+    insmod /system/lib/modules/blcr.ko
 
     chown system system /sys/devices/platform/galcore/power/control
     #gpu

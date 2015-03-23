@@ -108,7 +108,7 @@ on fs
     mount debugfs debugfs /sys/kernel/debug
 
 on post-fs
-    insmod /lib/modules/geu.ko
+    insmod /system/lib/modules/geu.ko
 
     chown system system /sys/devices/platform/galcore/power/control
     #gpu

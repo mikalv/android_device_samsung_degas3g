@@ -11,9 +11,6 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/degaswifi/full_degaswifi.mk)
 
-# Unofficial build ID
-TARGET_UNOFFICIAL_BUILD_ID := Sultan
-
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := degaswifi
 PRODUCT_NAME := cm_degaswifi

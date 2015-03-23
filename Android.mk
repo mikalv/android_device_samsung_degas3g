@@ -1,4 +1,4 @@
-# Copyright (C) 2013 The Android Open Source Project
+# Copyright (C) 2010 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,18 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+ifneq ($(filter degaswifi, $(TARGET_DEVICE)),)
 
-# Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_degaswifi
-PRODUCT_DEVICE := degaswifi
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-T230NU
+LOCAL_PATH := $(call my-dir)
 
-# Inherit makefile
-$(call inherit-product, device/samsung/degaswifi/device.mk)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
-# Vendor blobs
-$(call inherit-product-if-exists, vendor/samsung/degaswifi/degaswifi-vendor.mk)
+endif

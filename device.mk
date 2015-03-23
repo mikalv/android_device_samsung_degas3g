@@ -38,12 +38,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml
 
-# Set wifi-only before it's set by generic_no_telephony.mk
-PRODUCT_PROPERTY_OVERRIDES += \
-        ro.carrier=wifi-only
-		
-$(call inherit-product, build/target/product/full_base.mk)
-
 PRODUCT_CHARACTERISTICS := tablet
 
 # Enable higher-res drawables while keeping mdpi as primary source
@@ -51,36 +45,19 @@ PRODUCT_AAPT_CONFIG := large mdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := mdpi
 PRODUCT_LOCALES += mdpi
 
-# we have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# Set property overrides
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.zygote.disable_gl_preload=true \
-    ro.cm.hardware.cabc=/sys/class/mdnie/mdnie/cabc \
-    ro.bq.gpu_to_cpu_unsupported=1 \
-    wifi.interface=wlan0 \
-    wifi.softap.interface=wlan0 \
-    wifi.supplicant_scan_interval=30 \
-    dalvik.vm.heapsize=128m \
-    ro.carrier=wifi-only
-	
-DEFAULT_PROPERTY_OVERRIDES += \
-    ro.secure=0 \
-    ro.allow.mock.location=1 \
-    ro.debuggable=1 \
-    persist.service.adb.enable=1 \
-    persist.sys.usb.config=mtp,adb \
-    sys.disable_ext_animation=1
-
 # Charger
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
 
+# Net
+PRODUCT_PACKAGES += \
+    libnetcmdiface
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/samsung/degaswifi/rootdir/fstab.pxa1088:root/fstab.pxa1088 \
+    device/samsung/degaswifi/rootdir/init_bsp.rc:root/init_bsp.rc \
     device/samsung/degaswifi/rootdir/init_bsp.pxa1088.rc:root/init_bsp.pxa1088.rc \
     device/samsung/degaswifi/rootdir/init.pxa1088.rc:root/init.pxa1088.rc \
     device/samsung/degaswifi/rootdir/init.pxa1088.sensor.rc:root/init.pxa1088.sensor.rc \
@@ -88,25 +65,11 @@ PRODUCT_COPY_FILES += \
     device/samsung/degaswifi/rootdir/init_bsp.pxa1088.tel.rc:root/init_bsp.pxa1088.tel.rc \
     device/samsung/degaswifi/rootdir/init.pxa1088.security.rc:root/init.pxa1088.security.rc \
     device/samsung/degaswifi/rootdir/init.pxa1088.tel.rc:root/init.pxa1088.tel.rc \
+    device/samsung/degaswifi/rootdir/init.wifi.rc:root/init.wifi.rc \
     device/samsung/degaswifi/rootdir/ueventd.pxa1088.rc:root/ueventd.pxa1088.rc
-
-# RIL
-PRODUCT_PROPERTY_OVERRIDES += \
-    mobiledata.interfaces=wlan0
-
-# Disable SELinux
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.boot.selinux=disabled
 
 # Misc
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
-
-# Live Wallpapers
-PRODUCT_PACKAGES += \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    VisualizationWallpapers \
-    librs_jni
 
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
