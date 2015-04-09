@@ -15,7 +15,7 @@
 #
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += device/samsung/degaswifi/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/degas3g/overlay
 
 # Hardware permissions
 PRODUCT_COPY_FILES += \
@@ -56,17 +56,17 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-    device/samsung/degaswifi/rootdir/fstab.pxa1088:root/fstab.pxa1088 \
-    device/samsung/degaswifi/rootdir/init_bsp.rc:root/init_bsp.rc \
-    device/samsung/degaswifi/rootdir/init_bsp.pxa1088.rc:root/init_bsp.pxa1088.rc \
-    device/samsung/degaswifi/rootdir/init.pxa1088.rc:root/init.pxa1088.rc \
-    device/samsung/degaswifi/rootdir/init.pxa1088.sensor.rc:root/init.pxa1088.sensor.rc \
-    device/samsung/degaswifi/rootdir/init.pxa1088.usb.rc:root/init.pxa1088.usb.rc \
-    device/samsung/degaswifi/rootdir/init_bsp.pxa1088.tel.rc:root/init_bsp.pxa1088.tel.rc \
-    device/samsung/degaswifi/rootdir/init.pxa1088.security.rc:root/init.pxa1088.security.rc \
-    device/samsung/degaswifi/rootdir/init.pxa1088.tel.rc:root/init.pxa1088.tel.rc \
-    device/samsung/degaswifi/rootdir/init.wifi.rc:root/init.wifi.rc \
-    device/samsung/degaswifi/rootdir/ueventd.pxa1088.rc:root/ueventd.pxa1088.rc
+    device/samsung/degas3g/rootdir/fstab.pxa1088:root/fstab.pxa1088 \
+    device/samsung/degas3g/rootdir/init_bsp.rc:root/init_bsp.rc \
+    device/samsung/degas3g/rootdir/init_bsp.pxa1088.rc:root/init_bsp.pxa1088.rc \
+    device/samsung/degas3g/rootdir/init.pxa1088.rc:root/init.pxa1088.rc \
+    device/samsung/degas3g/rootdir/init.pxa1088.sensor.rc:root/init.pxa1088.sensor.rc \
+    device/samsung/degas3g/rootdir/init.pxa1088.usb.rc:root/init.pxa1088.usb.rc \
+    device/samsung/degas3g/rootdir/init_bsp.pxa1088.tel.rc:root/init_bsp.pxa1088.tel.rc \
+    device/samsung/degas3g/rootdir/init.pxa1088.security.rc:root/init.pxa1088.security.rc \
+    device/samsung/degas3g/rootdir/init.pxa1088.tel.rc:root/init.pxa1088.tel.rc \
+    device/samsung/degas3g/rootdir/init.wifi.rc:root/init.wifi.rc \
+    device/samsung/degas3g/rootdir/ueventd.pxa1088.rc:root/ueventd.pxa1088.rc
 
 # Misc
 PRODUCT_PACKAGES += \

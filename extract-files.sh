@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE=../../../vendor/samsung/degaswifi/proprietary
+BASE=../../../vendor/samsung/degas3g/proprietary
 mkdir -p $BASE
 for FILE in `cat proprietary-blobs.txt | grep -v "^#"`; do
 #    DIR=`dirname $FILE`

@@ -1,5 +1,5 @@
 #
-# system.prop for degaswifi
+# system.prop for degas3g
 #
 ro.zygote.disable_gl_preload=true
 ro.opengles.version = 131072

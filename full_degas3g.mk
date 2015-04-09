@@ -16,14 +16,14 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Set those variables here to overwrite the inherited values.
-PRODUCT_NAME := full_degaswifi
-PRODUCT_DEVICE := degaswifi
+PRODUCT_NAME := full_degas3g
+PRODUCT_DEVICE := degas3g
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
-PRODUCT_MODEL := SM-T230NU
+PRODUCT_MODEL := SM-T231
 
 # Inherit makefile
-$(call inherit-product, device/samsung/degaswifi/device.mk)
+$(call inherit-product, device/samsung/degas3g/device.mk)
 
 # Vendor blobs
-$(call inherit-product-if-exists, vendor/samsung/degaswifi/degaswifi-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/degas3g/degas3g-vendor.mk)

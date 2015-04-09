@@ -304,7 +304,6 @@ system/lib/libdirencryption.so
 system/lib/libdmcFaceEngine.so
 system/lib/libdmcSmartDP.so
 system/lib/libdmcSmartUX.so
-system/lib/libdocscanner_image-v7a.so
 system/lib/libdocsimageutils.so
 system/lib/libdprw.so
 system/lib/libdrawglfunction.so
@@ -387,7 +386,6 @@ system/lib/libmtp_samsung.so
 system/lib/libmtp_samsung_jni.so
 system/lib/libmvmem.so
 system/lib/libmysound.so
-system/lib/libndk1.so
 system/lib/libnetjni.so
 system/lib/libnvaccessor_fb.so
 system/lib/libomafldrm.so
