@@ -103,7 +103,6 @@ system/lib/hw/audio_path.voip.mrvl.so
 system/lib/hw/audio_path.vt.mrvl.so
 system/lib/hw/audio_policy.mrvl.so
 system/lib/hw/camera.mrvl.so
-system/lib/hw/consumerir.mrvl.so
 system/lib/hw/gralloc.mrvl.so
 system/lib/hw/hwcomposer.mrvl.so
 system/lib/hw/power.mrvl.so
@@ -260,7 +259,6 @@ system/lib/libcardioRecognizer.so
 system/lib/libcardioRecognizer_tegra2.so
 system/lib/libceu.so
 system/lib/libchord-v1.5.so
-system/lib/libchromeview.so
 system/lib/libcoda7542.so
 system/lib/libcoda7542hal.so
 system/lib/libcodecaacdec.so
@@ -393,7 +391,6 @@ system/lib/libomission_avoidance.so
 system/lib/libopencv_core.so
 system/lib/libopencv_imgproc.so
 system/lib/libparseTim.so
-system/lib/libpatts_engine_jni_api_ub.so
 system/lib/libphotoeditor_native.so
 system/lib/libphs_log.so
 system/lib/libpowerhintservice.so
